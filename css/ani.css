@@ -82,7 +82,7 @@ header nav .gnb li a {display: block; margin-top: 5px;}
 
 .dust_box .dust:nth-child(2) {position: absolute; width: 100%; height: 100%; background: url(../images/particles02.png); mix-blend-mode: color-dodge; animation: dust02 5s infinite linear; opacity: 1;}
 
-.dust_box .light {position: absolute; width: 100%; height: 100%; background: url(../images/sunlight.png); background-size: cover; mix-blend-mode: color-dodge; animation: light 5s infinite; z-index: 2;}
+.dust_box .light {position: absolute; width: 100%; height: 100%; background: url(../images/sunlight.png); background-size: cover; mix-blend-mode: color-dodge; animation: light 5s infinite;}
 
 @keyframes dust01 {
     0% {background-position: 0 0;}
