@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/* reset */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {color: #333; text-decoration: none;}
+table {border-collapse: collapse;}
+caption {font-size: 0; color: transparent; text-indent: -9999px; position: absolute; left: -9999px; height: 0; overflow: hidden;}
+
+@font-face {
+    font-family: 'Ownglyph_corncorn-Rg';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {height: 100%; font-family: 'Ownglyph_corncorn-Rg';}
+
+.wrap {} /* 여러번 쓸 수 있고 조합도 가능 - 내용들에 사용 */
+#wrap {} /* 한 페이지에 한 번 쓸 수 있는 이름 - 주로 큰 레이아웃을 만들 때 사용*/
+
+#wrap {width: 100%; height: 100vh; background: url('../images/main_image.jpg') no-repeat; background-size: cover; position: relative; overflow: hidden;} 
+
+.vignette {width: 100%; height: 100vh; background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%); position: absolute; top: 0; left: 0; animation: vignetteFadeIn 5s ease-in-out forwards;}
+
+@keyframes vignetteFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header {width: 80%; height: 50px; border-radius: 20px; background: rgba(255, 255, 255, 0.5); position: absolute; left: 50%; top: 50px; transform: translateX(-50%); display: flex; justify-content: space-around; align-items: center; gap: 50px; backdrop-filter: blur(5px); opacity: 0.4; transition: 0.2s; padding: 0 50px; z-index: 1;}
+
+header:hover {opacity: 1;}
+
+header h1 {width: 200px; display: flex; align-items: center;}
+
+header h1 img {width: 100%;}
+
+header audio {width: 100px; height: 30px; transition: 1s;}
+header:hover audio {width: 400px;}
+
+header nav {width: 800px;}
+
+header nav .gnb {display: flex;}
+header nav .gnb li {width: 20%; flex-grow: 1; font-size: 18px; text-align: center; border-right: 1px solid #28821a;}
+header nav .gnb li:last-child {border: 0;}
+header nav .gnb li a {display: block; margin-top: 5px;}
+
+
+.textbox {position: absolute; left: 10%; top: 70%; transform: translateY(-70%); font-size: 70px; color: rgba(255, 255, 255, 0.8); display: flex; gap: 20px; z-index: 1;}
+
+.textbox ul {transform-style: preserve-3d; perspective: 800px;}
+.textbox ul li {height: 80px; animation: text 2s forwards; opacity: 0; position: relative;}
+.textbox ul li.ma {margin-bottom: 30px;}
+
+@keyframes text {
+    0% {opacity: 0; right: -100px; top: -100px; transform: rotate(20deg) rotateY(90deg);}
+    100% {opacity: 1; right: 0; top: 0; transform: rotate(0) rotateY(0);}
+}
+
+.textbox ul:nth-child(1) li:nth-child(1) {animation-delay: 0s;}
+.textbox ul:nth-child(1) li:nth-child(2) {animation-delay: 0.2s;}
+.textbox ul:nth-child(1) li:nth-child(3) {animation-delay: 0.4s;}
+.textbox ul:nth-child(1) li:nth-child(4) {animation-delay: 0.6s;}
+.textbox ul:nth-child(1) li:nth-child(5) {animation-delay: 0.8s;}
+.textbox ul:nth-child(1) li:nth-child(6) {animation-delay: 1s;}
+.textbox ul:nth-child(1) li:nth-child(7) {animation-delay: 1.2s;}
+.textbox ul:nth-child(1) li:nth-child(8) {animation-delay: 1.4s;}
+
+.textbox ul:nth-child(2) li:nth-child(1) {animation-delay: 2.2s;}
+.textbox ul:nth-child(2) li:nth-child(2) {animation-delay: 2.4s;}
+.textbox ul:nth-child(2) li:nth-child(3) {animation-delay: 2.6s;}
+.textbox ul:nth-child(2) li:nth-child(4) {animation-delay: 2.8s;}
+.textbox ul:nth-child(2) li:nth-child(5) {animation-delay: 3s;}
+
+
+.dust_box .dust:nth-child(1) {position: absolute; width: 100%; height: 100%; background: url(../images/particles.png); mix-blend-mode: color-dodge; animation: dust01 10s infinite linear;}
+
+.dust_box .dust:nth-child(2) {position: absolute; width: 100%; height: 100%; background: url(../images/particles02.png); mix-blend-mode: color-dodge; animation: dust02 5s infinite linear; opacity: 1;}
+
+.dust_box .light {position: absolute; width: 100%; height: 100%; background: url(../images/sunlight.png); background-size: cover; mix-blend-mode: color-dodge; animation: light 5s infinite;}
+
+@keyframes dust01 {
+    0% {background-position: 0 0;}
+    100% {background-position: 500px 100px;}
+}
+@keyframes dust02 {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes light {
+    0% {opacity: 0; transform: rotate(0);}
+    50% {opacity: 1; transform: scale(2) rotate(10deg);}
+    100% {opacity: 0; transform: rotate(0);}
+}
