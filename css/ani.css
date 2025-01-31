@@ -86,7 +86,7 @@ header nav .gnb li a {display: block; margin-top: 5px;}
 
 @keyframes dust01 {
     0% {background-position: 0 0;}
-    100% {background-position: -500px 100px;}
+    100% {background-position: 500px 100px;}
 }
 @keyframes dust02 {
     0% {opacity: 0;}
@@ -98,8 +98,3 @@ header nav .gnb li a {display: block; margin-top: 5px;}
     50% {opacity: 1; transform: scale(2) rotate(10deg);}
     100% {opacity: 0; transform: rotate(0);}
 }
-
-
-.content1 {position: absolute; width: 60%; height: 600px; right: -100%; top: 55%; transform: translateY(-50%); background: #fff; z-index: 7; border-radius: 50px; transition: 1s;}
-
-.content1.ani {right: 8%;}
