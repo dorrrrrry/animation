@@ -19,7 +19,7 @@ html, body {height: 100%; font-family: 'Ownglyph_corncorn-Rg';}
 .wrap {} /* 여러번 쓸 수 있고 조합도 가능 - 내용들에 사용 */
 #wrap {} /* 한 페이지에 한 번 쓸 수 있는 이름 - 주로 큰 레이아웃을 만들 때 사용*/
 
-#wrap {width: 100%; height: 100vh; background: url('../images/main_image.jpg') no-repeat; background-size: cover; position: relative;} 
+#wrap {width: 100%; height: 100vh; background: url('../images/main_image.jpg') no-repeat; background-size: cover; position: relative; overflow: hidden;} 
 
 .vignette {width: 100%; height: 100vh; background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%); position: absolute; top: 0; left: 0; animation: vignetteFadeIn 5s ease-in-out forwards;}
 
